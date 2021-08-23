@@ -4,6 +4,7 @@ import {
   Flex,
   Heading,
   VStack,
+  HStack,
   SimpleGrid,
   Button
 } from "@chakra-ui/react";
@@ -38,8 +39,10 @@ export default function CreatUser() {
             </SimpleGrid>
           </VStack>
           <Flex mt="8" justify="flex-end">
-            <Button colorScheme="whiteAlpha">Cancelar</Button>
-            <Button colorScheme="pink">Salvar</Button>
+            <HStack spacing="4">
+              <Button colorScheme="whiteAlpha">Cancelar</Button>
+              <Button colorScheme="pink">Salvar</Button>
+            </HStack>
           </Flex>
         </Box>
       </Flex>
