@@ -7,7 +7,7 @@ type User = {
   created_at: string;
 }
 export function makeServer(){
-  const server = createServer({
+  return createServer({
     models: {
       user: Model.extend<Partial<User>>({})
     },
@@ -27,7 +27,7 @@ export function makeServer(){
     },
 
     seeds(server) {
-      server.createList('user', 200)
+      server.createList('user', 10)
     },
 
     routes() {
@@ -39,6 +39,4 @@ export function makeServer(){
       this.passthrough();
     }
   })
-
-  return server;
 }
